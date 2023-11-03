@@ -36,15 +36,8 @@ class Bank(User):
     self.show_user_details()
     print("Account balance is: $", self.balance)
   
-
-# john = User('Johan', 21, 'Male')
-# john.show_user_details()
-
-# johan = Bank('Johan', 40, "Male")
-# johan.name
-
-jonny = Bank('jonny', 30,'Male')
-jonny.deposit(200)
-jonny.deposit(500)
-jonny.withdraw(700)
-jonny.view_balance()
+johnny = Bank('jonny', 30,'Male')
+johnny.deposit(200)
+johnny.deposit(500)
+johnny.withdraw(700)
+johnny.view_balance()
