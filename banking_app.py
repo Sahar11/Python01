@@ -7,7 +7,7 @@ class User():
     self.gender = gender
 
   def show_user_details(self):
-    print("Personal Details: ")
+    print("Personal Details:")
     print("")
     print("Name  ", self.name)
     print("Age  ", self.age)
@@ -22,8 +22,19 @@ class Bank(User):
   def deposit (self,amount):
     self.amount = amount
     self.balance = self.balance + self.amount
-    print("Account balance has been updated : ", self.balance)
+    print("Account balance has been updated : $", self.balance)
   
+  def withdraw(self, amount):
+    self.amount = amount
+    if(self.amount > self.balance):
+      print("Insufficient Funds | Balance Available : $", self.balance)
+    else:
+      self.balance = self.balance - self.amount
+      print("Account balance has been updated :$", self.balance)
+  
+  def view_balance(self):
+    self.show_user_details()
+    print("Account balance is: $", self.balance)
   
 
 # john = User('Johan', 21, 'Male')
@@ -35,3 +46,5 @@ class Bank(User):
 jonny = Bank('jonny', 30,'Male')
 jonny.deposit(200)
 jonny.deposit(500)
+jonny.withdraw(700)
+jonny.view_balance()
